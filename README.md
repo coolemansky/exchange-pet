@@ -44,4 +44,4 @@ http://localhost/api/doc
 ![Screenshot_1.png](images/Screenshot_1.png)
 
 Пример happy-path запроса
-[Screenshot_2.png](images/Screenshot_2.png)
+![Screenshot_2.png](images/Screenshot_2.png)
