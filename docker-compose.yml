@@ -9,7 +9,6 @@ services:
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
-      - mysql
     networks:
       - network
   php:
@@ -21,20 +20,6 @@ services:
       - "9000:9000"
     volumes:
       - ./app:/var/www/pet-project
-    networks:
-      - network
-  mysql:
-    image: mysql:8
-    container_name: mysql8-container
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./docker/mysql:/var/lib/mysql
-    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-    restart: always # always restart unless stopped manually
-    environment:
-      MYSQL_ROOT_PASSWORD: secret
-      MYSQL_PASSWORD: secret
     networks:
       - network
 networks:

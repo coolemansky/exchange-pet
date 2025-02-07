@@ -1,0 +1,28 @@
+nelmio_api_doc:
+  documentation:
+    info:
+      title: 'Документация API'
+      description: 'Получение актуального списка вают'
+      version: '1.0.0'
+    components:
+      securitySchemes:
+        bearerAuth:
+          type: http
+          scheme: bearer
+          bearerFormat: JWT  # optional, for documentation purposes only
+          description: >-
+            Enter the token `without` the `Bearer: ` prefix, e.g. "token_1234".
+        exchangeAuthKey:
+          type: apiKey
+          description: exchangeAuthKey.
+          name: Exchange-Auth
+          in: header
+    security:
+      - bearerAuth: [ ]
+      - exchangeAuthKey: [ ]
+  areas:
+    default:
+      path_patterns:
+        - ^\/api(?!\/(doc.*|admin\/?.*)$). # Accepts routes under /api except /api/doc* /api/admin/* and /api itself
+        - ^\/ping
+        - ^\/metrics

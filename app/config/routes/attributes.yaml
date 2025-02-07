@@ -1,0 +1,3 @@
+currency:
+    resource: ../../src/ProjectModule/Application/Adapter/Api/Exchange/Controller/
+    type: attribute
