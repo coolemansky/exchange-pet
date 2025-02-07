@@ -39,3 +39,9 @@ http://localhost/api/doc
 ```
 ### Установка
 выполнить `make init`
+
+Пример сваггера
+![Screenshot_1.png](images/Screenshot_1.png)
+
+Пример happy-path запроса
+[Screenshot_2.png](images/Screenshot_2.png)
