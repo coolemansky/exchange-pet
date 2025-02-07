@@ -37,5 +37,3 @@ curl -X 'GET' \
 ```
 http://localhost/api/doc
 ```
-
-## Установка
