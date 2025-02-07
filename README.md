@@ -27,6 +27,7 @@ curl -X 'GET' \
 
 - **user** - имеет доступ к эндпоинту.
 - **user1** - не имеет доступа к эндпоинту.
+`\App\ProjectModule\Infrastructure\Domain\User\Memory\MemoryUserRepository::USER_LIST`
 
 Для корректной работы эндпоинта необходимо использовать `Authorization: Bearer user` и `Exchange-Auth: <ваш корректный токен>`.
 
